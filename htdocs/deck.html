@@ -11,14 +11,19 @@
 		<style>
 			* {
 				box-sizing: border-box;
+				position: relative;
+				top: 30%;
 			}
+
 			#deck{
 				width: 50vw;
 				height: 50vh;
 				margin: 0 auto 110px;
 				border: 3px solid black;
 				padding: 40px;
+				
 			}
+
 			#deck div{
 				border: 3px solid black;
 				height: 30vh;
@@ -28,25 +33,75 @@
 				font-size: 2em;
 				padding: 5px;
 				font-weight: bold;
+				position: absolute;
+				top: 20%;
+				left: 30%;
+				transition: all 0.5s ease;
+				
+					transform-origin: bottom left;
 			}
+			
 			#deck div:hover{
-				border: 3px solid yellow;
+				border: 3px solid rgb(255, 0, 0);
 			}
+			#deck:hover div:first-child{
+				z-index: 1;
+				-ms-transform: rotate(-60deg);
+					-webkit-transform: rotate(-60deg);
+			}
+			#deck:hover div:nth-child(2){
+				z-index: 2;
+				position: absolute;
+				-ms-transform: rotate(-50deg);
+					-webkit-transform: rotate(-50deg);
+					transform: rotate(-50deg);
+			}
+			#deck:hover div:nth-child(3){
+				z-index: 3;
+				position: absolute;
+				-ms-transform: rotate(-30deg);
+					-webkit-transform: rotate(-30deg);
+					transform: rotate(-30deg);
+			}
+			#deck:hover div:nth-child(4){
+				z-index: 4;
+				position: absolute;
+			}
+			#deck:hover div:nth-child(5){
+				z-index: 5;
+				position: absolute;
+				-ms-transform: rotate(25deg);
+				-webkit-transform: rotate(25deg);
+					transform: rotate(25deg);
+			}
+
 			#deck div:first-child:hover{
-				background-color: yellow;
+				background-color: rgb(244, 167, 23);
+				z-index: 1;
+				position: absolute;
 			}
 			#deck div:nth-child(2):hover{
-				background-color: orange;
+				background-color: navy;
+				z-index: 2;
+				position: absolute;
 			}
 			#deck div:nth-child(3):hover{
-				background-color: green;
+				background-color: rgb(226, 124, 179);
+				z-index: 3;
+				position: absolute;
 			}
 			#deck div:nth-child(4):hover{
-				background-color: blue;
+				background-color: rgb(128, 13, 13);
+				z-index: 4;
+				position: absolute;
 			}
 			#deck div:nth-child(5):hover{
-				background-color: violet;
+				background-color: royalblue;
+				z-index: 5;
+				position: absolute;
 			}
+
+			
 			a {
 				text-decoration: none;
 			}
